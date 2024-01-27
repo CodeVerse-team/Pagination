@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Dynamic Pagination</title>
+    <style>
+        /* Basic Pagination Styles */
+        .pagination {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 20px;
+          font-family: Arial, sans-serif;
+        }
+
+        .pagination ul {
+          list-style: none;
+          padding: 0;
+          display: flex;
+        }
+
+        .pagination li {
+          margin: 0 5px;
+        }
+
+        .pagination a {
+          text-decoration: none;
+          padding: 8px 12px;
+          border: 1px solid #007BFF;
+          border-radius: 4px;
+          color: #007BFF;
+        }
+
+        .pagination a:hover {
+          background-color: #007BFF;
+          color: white;
+        }
+
+        /* Previous and Next Buttons */
+        .pagination .prev,
+        .pagination .next {
+          font-weight: bold;
+        }
+
+        /* Active Page */
+        .pagination .active a {
+          background-color: #007BFF;
+          color: white;
+          /* Add a glowing effect for the active page */
+          animation: glow 1s infinite alternate;
+        }
+
+        /* Home Button Style */
+        .pagination .home a {
+          background-color: #FF5733; /* Change this to the color you prefer */
+          color: white;
+        }
+
+        /* Disabled Buttons */
+        .pagination .disabled a {
+          cursor: not-allowed;
+          color: #ccc;
+          border-color: #ccc;
+        }
+
+        @keyframes glow {
+          0% {
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+          }
+          100% {
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
+          }
+        }
+    </style>
+</head>
+<body>
+    <div class="pagination">
+        <ul>
+          <li class="prev"><a href="#">Previous</a></li>
+          <li class="home"><a href="#"><i class="fas fa-home"></i></a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <!-- Add more page numbers here -->
+          <li><a href="#">5</a></li>
+          <li class="next"><a href="#">Next</a></li>
+        </ul>
+      </div>
+</body>
+</html>
